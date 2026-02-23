@@ -10,6 +10,3 @@
 *.fls
 *.fdb_latexmk
 
-# Copyrighted course/paper PDFs (do not publish)
-CENG574_Introduction.pdf
-CENG574_Spring25_Syllabus.pdf
