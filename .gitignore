@@ -8,11 +8,5 @@
 *.fdb_latexmk
 
 # Copyrighted course/paper PDFs (do not publish)
-li_et_al_2022.pdf
 CENG574_Introduction.pdf
 CENG574_Spring25_Syllabus.pdf
-CENG574_Spring_25_Assignment1 (1).pdf
-
-# Root-level duplicates (anchored to root only)
-/assignment1.tex
-/assignment1.pdf
