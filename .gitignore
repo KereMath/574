@@ -13,6 +13,6 @@ CENG574_Introduction.pdf
 CENG574_Spring25_Syllabus.pdf
 CENG574_Spring_25_Assignment1 (1).pdf
 
-# Root-level duplicates
-assignment1.tex
-assignment1.pdf
+# Root-level duplicates (anchored to root only)
+/assignment1.tex
+/assignment1.pdf
