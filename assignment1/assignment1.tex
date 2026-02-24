@@ -1,229 +1,208 @@
-\documentclass[12pt, a4paper]{article}
+\documentclass[11pt, a4paper]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{mathptmx}
 \usepackage{geometry}
 \usepackage{setspace}
 \usepackage{parskip}
 \usepackage{titlesec}
 \usepackage{hyperref}
-\usepackage{booktabs}
 \usepackage{enumitem}
-\usepackage{lmodern}
+\usepackage{amsmath}
 
-\geometry{
-  top=2.5cm,
-  bottom=2.5cm,
-  left=3cm,
-  right=3cm
-}
-
+\geometry{top=2.5cm, bottom=2.5cm, left=3cm, right=3cm}
 \onehalfspacing
+\setlength{\parskip}{6pt}
 
-\titleformat{\section}{\large\bfseries}{\thesection.}{0.5em}{}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+
+\titleformat{\section}{\normalsize\bfseries}{\thesection.}{0.5em}{}
 \titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.5em}{}
-
-\hypersetup{
-  colorlinks=true,
-  linkcolor=black,
-  urlcolor=black,
-  citecolor=black
-}
 
 \begin{document}
 
-% ── Title Block ────────────────────────────────────────────────────────────────
-\begin{center}
-  {\large\bfseries Middle East Technical University}\\[0.3em]
-  {\normalsize Department of Computer Engineering}\\[1.2em]
-  {\LARGE\bfseries CENG 574 — Statistical Data Analysis}\\[0.6em]
-  {\large Assignment 1}\\[0.4em]
-  {\normalsize Spring 2025--2026}\\[0.8em]
-  {\normalsize Kerem Recep Gür \ $|$ \ 2448462}\\[1.2em]
-  \rule{\linewidth}{0.4pt}
-\end{center}
+\begin{flushleft}
+  Kerem Recep G\"{u}r \ $|$ \ 2448462 \hfill CENG 574 --- Article Review
+\end{flushleft}
+\rule{\linewidth}{0.4pt}
 
-\vspace{1em}
+\vspace{0.5em}
 
-% ── Section 1: Summary ─────────────────────────────────────────────────────────
 \section{Summary of the Article}
 
-The article by Li et al.\ (2022), titled \textit{``Evaluating the Impact of Big Data Analytics
-Usage on the Decision-Making Quality of Organizations''}, investigates how the extent to
-which firms use big data analytics tools influences the quality of their organizational
-decisions. The study is grounded in \textbf{dynamic capability theory}, which distinguishes
-between low-order and high-order organizational capabilities: big data analytics usage is
-treated as a low-order capability, while data analytics capabilities (encompassing technical
-skills and managerial skills) are treated as a high-order capability that can be cultivated
-through lower-order practices.
+The article by Li et al.\ (2022) investigates how big data analytics usage (BDU)
+affects the quality of organizational decision making.
+The authors build their argument on \textbf{dynamic capability theory}, which
+divides organizational capabilities into two levels: low-order capabilities, which
+are basic operational skills, and high-order capabilities, which are more advanced
+and harder to imitate.
+According to this framework, BDU is a low-order capability that helps firms
+build data analytics capabilities (DAC)---a high-order capability---which in turn
+leads to better decisions.
 
-The central argument of the paper is that big data analytics usage does not improve
-decision-making quality in isolation; rather, its full benefit is realized when it develops
-the firm's underlying data analytics capabilities. Accordingly, the authors propose and test
-three hypotheses:
+To test this argument, the authors collected survey data from 240 agricultural
+firms in China and analyzed them using \textbf{PLS-SEM} (SmartPLS 3.3.2).
+Three hypotheses were tested and all were supported:
+
 \begin{itemize}[leftmargin=1.5em]
-  \item \textbf{H1:} Big data analytics usage positively affects decision-making quality.
-  \item \textbf{H2:} Big data analytics usage positively affects data analytics capabilities.
-  \item \textbf{H3:} Data analytics capabilities positively affect decision-making quality.
+  \item \textbf{H1:} BDU has a direct positive effect on decision-making quality
+        ($\beta = 0.223$, $p < 0.01$).
+  \item \textbf{H2:} BDU significantly contributes to the development of DAC
+        ($\beta = 0.623$, $p < 0.001$).
+  \item \textbf{H3:} DAC has a positive effect on decision-making quality
+        ($\beta = 0.394$, $p < 0.001$).
 \end{itemize}
 
-Data were collected via a structured questionnaire distributed to senior executives of
-provincial agricultural firms in China, with the assistance of China's Department of
-Agriculture and Rural Affairs. Out of 2{,}652 firms contacted, 286 responses were
-received, of which 240 were valid after excluding incomplete answers. All measurement
-items were adapted from validated scales in prior information-systems literature and
-translated into Chinese by a bilingual co-author.
+In addition, the mediation analysis showed that DAC acts as a
+\textbf{partial mediator} between BDU and decision-making quality.
+The indirect effect was statistically significant ($\text{effect} = 0.218$,
+$p < 0.001$), meaning that part of the benefit of using big data tools reaches
+decision quality through the organizational capabilities that are built along the way.
 
-The empirical analysis was carried out using \textbf{Partial Least Squares Structural
-Equation Modeling (PLS-SEM)} via SmartPLS 3.3.2. All three hypotheses were supported:
-big data analytics usage had a direct positive effect on decision-making quality
-($\beta = 0.223$, $p < 0.01$) and a strong positive effect on data analytics capabilities
-($\beta = 0.623$, $p < 0.001$), while data analytics capabilities in turn positively
-influenced decision-making quality ($\beta = 0.394$, $p < 0.001$). Mediation analysis
-using both the Sobel test and bootstrapping confirmed that data analytics capabilities
-\textit{partially} mediate the relationship between big data analytics usage and
-decision-making quality (indirect effect $= 0.218$, 95\% CI: $[0.123, 0.329]$). Robustness
-checks, including an alternative model reversal and confirmatory composite analysis,
-further validated the proposed model.
-
-The authors conclude that firms should not only promote the adoption of big data analytics
-tools across their operations but also deliberately invest in developing their employees'
-technical and managerial skills, since these capabilities serve as the key mechanism through
-which analytics usage ultimately translates into higher-quality decisions.
-
-% ── Section 2: Strengths ───────────────────────────────────────────────────────
 \section{Strengths of the Study}
 
-\subsection{Solid Theoretical Grounding}
-The study is built on a well-established theoretical lens---dynamic capability theory---which
-provides a principled rationale for why big data analytics usage (a lower-order capability)
-should cultivate data analytics capabilities (a higher-order capability) and thereby improve
-decision-making quality. Anchoring the research model in theory prevents it from being
-merely descriptive and allows its findings to generalize beyond the agricultural context.
+\subsection{Bias Controls and Data Quality}
 
-\subsection{Rigorous Scale Development and Validation}
-All measurement items were adapted from previously validated scales in the IS literature
-(Yunis et al., 2018; Ghasemaghaei, 2019; Ghasemaghaei et al., 2018). The authors
-subjected the scales to a multi-step validation process: forward--backward translation,
-two independent bilingual proofreaders, and a pretest with 20 students majoring in
-agricultural big data analysis. Convergent validity (AVE $\geq 0.510$), composite reliability
-(CR $\geq 0.822$), and internal consistency (Cronbach's $\alpha \geq 0.774$) all exceeded
-recommended thresholds.
+The study applies several important checks to make sure the survey data is
+trustworthy.
+To deal with \textbf{common method bias}---a common problem in studies where
+the same person answers all questions---the authors used the marker variable
+technique proposed by Lindell and Whitney (2001).
+The average marker correlation was very low ($r_{M} = 0.014$), and the
+differences between adjusted and unadjusted path estimates were small
+($\Delta r \leq 0.010$), which suggests that this type of bias was not a
+serious issue.
 
-\subsection{Addressing Common Method Bias}
-Because both independent and dependent variables were collected from the same respondents
-in the same survey, common method bias is a legitimate concern. The authors proactively
-applied the \textit{marker variable technique} (Lindell \& Whitney, 2001), using gender as
-a theoretically unrelated marker. The negligible average correlation ($r_M = 0.014$) and
-the statistical equivalence of path estimates between the baseline and adjusted models
-($\chi^2 = 9$, $p = 0.109$) indicate that common method bias did not substantially distort
-the results.
+The authors also checked for \textbf{non-response bias} by comparing the
+responses of people who answered early ($n = 185$) with those who answered
+late after the reminder email ($n = 55$).
+No significant differences were found between the two groups, which means
+the results are unlikely to be distorted by who chose to respond.
 
-\subsection{Non-Response Bias Assessment}
-The authors compared early (n = 185) and late (n = 55) respondents on all key constructs
-using t-tests and chi-square tests. The absence of significant differences between the
-groups strengthens confidence that the achieved sample is representative of the target
-population.
+\subsection{Advanced Model Validation}
 
-\subsection{Comprehensive Robustness Testing}
-Beyond the main PLS analysis, the authors re-ran the model treating all constructs as
-composite indicators, performed confirmatory composite analysis (SRMR = 0.034,
-below the 0.08 threshold), and estimated an alternative model in which the direction of the
-BDU--DAC relationship was reversed. The alternative model produced inferior fit statistics,
-lending additional support to the theoretical direction of effects.
+The measurement model was validated using \textbf{Confirmatory Composite
+Analysis (CCA)}.
+The SRMR value was $0.034$, which is well below the commonly used threshold
+of $0.08$, indicating a good overall model fit.
 
-\subsection{Dual Mediation Test}
-Using both the Sobel test and bias-corrected bootstrapping (n = 4{,}999 resamples) to
-assess mediation is considered best practice in PLS-SEM research, as bootstrapping does
-not assume normality of the sampling distribution. The consistent significance across both
-methods strengthens the mediation conclusion.
+More importantly, the authors conducted a \textbf{robustness test} by
+estimating an alternative model where DAC was assumed to cause BDU instead of
+the other way around.
+This reversed model performed worse on key fit indices---the SRMR was $0.050$
+(compared to $0.034$ in the original) and the $d_{\text{ULS}}$ value of
+$0.297$ exceeded its $95\%$ bootstrap threshold of $0.237$---confirming that
+the original theoretical direction is the correct one.
 
-% ── Section 3: Weaknesses ──────────────────────────────────────────────────────
-\section{Weaknesses of the Study and Suggested Improvements}
+\subsection{Mediation Analysis and Control Variables}
 
-\subsection{Single-Sector, Single-Country Sample}
-The study relies exclusively on agricultural firms in China, which raises questions about
-external validity. The big data landscape, regulatory environment, and organizational
-culture in Chinese agriculture may differ considerably from other industries (e.g.,
-manufacturing, finance, healthcare) or other national contexts. As a result, it is unclear
-whether the reported effect sizes would hold in different settings.
+The study uses two separate methods to confirm the mediation effect:
+a \textbf{Sobel test} and \textbf{bootstrapping} with $n = 4{,}999$ resamples.
+The $95\%$ confidence interval for the indirect effect was $[0.123,\ 0.329]$,
+which does not include zero, providing strong statistical support for the
+mediation.
 
-\textit{What could be done:} Future research should replicate the model across multiple
-industries and countries. A cross-industry design would also allow moderation analysis to
-test whether industry type strengthens or weakens the relationship between big data
-analytics usage and decision-making quality.
+The authors also included \textbf{control variables}---firm size and IT
+department size---to isolate the specific contribution of BDU and DAC.
+Neither control variable had a significant effect on decision quality
+(firm size: $\beta = 0.012$, $p > 0.05$; IT size: $\beta = 0.038$, $p > 0.05$),
+which strengthens the interpretation of the main results.
 
-\subsection{Cross-Sectional Research Design}
-All data were collected at a single point in time, meaning that the study cannot establish
-causal ordering or capture the temporal dynamics of capability building. Firms may need
-months or years of sustained analytics usage before observable improvements in data
-analytics capabilities and decision quality materialize.
+\section{Weaknesses and Identified Errors}
 
-\textit{What could be done:} A longitudinal panel design---measuring the same firms at
-multiple time points---would allow researchers to examine how capabilities evolve over time
-and whether the effects persist, strengthen, or decay. Alternatively, a quasi-experimental
-or difference-in-differences design exploiting exogenous variation in analytics adoption
-(e.g., regulatory mandates or subsidized technology roll-outs) could support stronger
-causal inference.
+\subsection{Discriminant Validity Problem (HTMT Ratio)}
 
-\subsection{Low Explained Variance in Decision-Making Quality}
-The model accounts for only 32.5\% of the variance in decision-making quality ($R^2 =
-0.325$). While this is acceptable in exploratory IS research, it implies that the majority
-of variation in decision-making quality is driven by factors outside the model---such as
-leadership quality, organizational learning culture, data governance, or market uncertainty.
+One important statistical concern is related to the
+\textbf{heterotrait-monotrait (HTMT) ratio}, which is a measure used to check
+whether two constructs in a model are truly distinct from each other.
+Table~6 of the article shows that the HTMT between BDU and DAC is $0.857$.
 
-\textit{What could be done:} The model should be extended with theoretically motivated
-moderators and additional mediators. For example, \textit{organizational absorptive
-capacity}, \textit{data governance maturity}, and \textit{top-management support} have
-been identified in adjacent literature as important antecedents of big data value. Including
-such variables would both raise explanatory power and provide richer managerial guidance.
+According to Henseler et al.\ (2015), who introduced this criterion and whose
+paper has since become one of the most frequently cited works in the field of
+structural equation modeling, values above the strict threshold of $0.85$ raise
+concerns about discriminant validity.
+The authors of the reviewed article acknowledge the $0.85$ threshold but prefer
+to apply the more lenient threshold of $0.90$, under which their value would
+still be acceptable.
+However, using the stricter criterion, this result suggests that the survey
+respondents may not have clearly separated the concept of ``using big data tools''
+from the concept of ``having the capability to work with data.''
+This is a noteworthy issue because the whole theoretical argument of the paper
+depends on BDU and DAC being clearly different constructs.
 
-\subsection{Discriminant Validity Concern for BDU and DAC}
-The HTMT ratio between big data analytics usage and data analytics capabilities is 0.857,
-which is above the stricter recommended threshold of 0.850 (though below the more lenient
-threshold of 0.900). This suggests that respondents may not have sharply distinguished
-between \textit{using} analytics tools and \textit{being capable} with analytics, which is
-conceptually important for the study's mediation argument.
+\subsection{Reporting Inconsistencies in the Methodology}
 
-\textit{What could be done:} The measurement model could be refined by adding items that
-more concretely differentiate operational usage (frequency, breadth of tool deployment)
-from capability (depth of analytical expertise, ability to interpret and act on results).
-Qualitative pretesting with industry practitioners could help identify item wordings that
-produce clearer conceptual separation.
+The paper contains some clear clerical mistakes.
+In the main text, the authors state that items BDU4, DQ1, DQ4, and DQ8
+were removed from the analysis because their factor loadings were below the
+acceptable threshold.
+However, all four of these items are still listed in the Appendix, as if they
+were part of the final measurement model.
 
-\subsection{Perceptual, Self-Reported Measures}
-All constructs---including decision-making quality---are measured through managerial
-self-reports on a 5-point Likert scale. Self-reported decision quality is inherently
-subjective and may be inflated by social desirability or optimism bias. Executives who
-champion big data initiatives may unconsciously rate their firm's decisions more favorably.
+Additionally, the text claims that ``three indicators were below the threshold
+of $0.600$,'' but then proceeds to list four specific items.
+These inconsistencies are not critical to the overall findings, but they do
+reduce the overall precision of the paper's statistical reporting and suggest
+that the manuscript was not thoroughly proofread before submission.
 
-\textit{What could be done:} Archival or objective performance indicators (e.g., forecast
-accuracy, product defect rates, inventory turnover) could be used as observable proxies for
-decision-making quality alongside self-reported measures. Using both objective and
-perceptual indicators in a multi-method design would substantially strengthen the
-construct validity of the dependent variable.
+\subsection{Low Explanatory Power and Small Effect Size for H1}
 
-\subsection{Absence of Boundary Conditions}
-The model treats the relationship between big data analytics usage and decision-making
-quality as uniformly positive across all firms in the sample. However, the IT productivity
-paradox---briefly acknowledged in the introduction---suggests that returns to analytics
-usage may depend on firm-level contingencies such as size, IT maturity, or data quality.
-None of these potential moderators is tested.
+The model explains only $32.5\%$ of the variance in decision-making quality
+($R^{2} = 0.325$), which means that nearly $67.5\%$ of the factors that affect
+decision quality are not included in this study.
+While this level is not unusual in survey-based research, it does suggest that
+the model is incomplete.
 
-\textit{What could be done:} Including interaction terms between big data analytics usage
-and candidate moderators (e.g., data quality, IT infrastructure, or competitive intensity)
-would identify the conditions under which analytics usage yields the greatest improvements
-in decision quality. This would make the prescriptive implications of the study more precise
-and actionable for managers.
+Furthermore, the \textbf{effect size} ($f^{2}$) for the direct relationship
+between BDU and decision quality (H1) is only $0.084$.
+This value is below the medium threshold of $0.15$ suggested by Cohen (1988).
+This means that while the relationship is statistically significant, its
+practical importance is relatively limited.
+Adding other known predictors of decision quality, such as data quality or
+top management support, could have made the model more powerful.
 
-% ── References ─────────────────────────────────────────────────────────────────
+\subsection{Limited Generalizability and Self-Report Bias}
+
+The sample consists entirely of agricultural firms located in China.
+This means that the results may not apply to other types of organizations,
+such as technology companies or healthcare providers, or to firms operating in
+different cultural and regulatory environments.
+The authors mention this limitation themselves, but do not suggest specific
+future research contexts where replication would be most valuable.
+
+In addition, all of the variables in the study---including ``decision-making
+quality''---were measured through self-reported questionnaires filled out by
+managers.
+People who are asked to evaluate their own organization's performance may tend
+to respond more positively than the actual situation warrants.
+Using objective performance data, such as financial indicators or operational
+efficiency metrics, as a supplement would have helped to reduce this
+potential \textbf{optimism bias}.
+
 \section*{References}
 
-\begin{itemize}[leftmargin=1.5em, label={}]
-  \item Li, L., Lin, J., Ouyang, Y., \& Luo, X. R. (2022). Evaluating the impact of big
-    data analytics usage on the decision-making quality of organizations.
-    \textit{Technological Forecasting \& Social Change}, \textit{175}, 121355.
-    \url{https://doi.org/10.1016/j.techfore.2021.121355}
+\begin{itemize}[leftmargin=1.5em, label={}, itemsep=0.4em]
+
+  \item Cohen, J.\ (1988). \textit{Statistical power analysis for the behavioral
+        sciences} (2nd ed.). Lawrence Erlbaum Associates.
+
+  \item Henseler, J., Ringle, C.\ M., \& Sarstedt, M.\ (2015). A new criterion for
+        assessing discriminant validity in variance-based structural equation
+        modeling. \textit{Journal of the Academy of Marketing Science},
+        \textit{43}(1), 115--135.
+        \url{https://doi.org/10.1007/s11747-014-0403-8}
+
+  \item Li, L., Lin, J., Ouyang, Y., \& Luo, X.\ R.\ (2022). Evaluating the impact
+        of big data analytics usage on the decision-making quality of organizations.
+        \textit{Technological Forecasting \& Social Change}, \textit{175}, 121355.
+        \url{https://doi.org/10.1016/j.techfore.2021.121355}
+
+  \item Lindell, M.\ K., \& Whitney, D.\ J.\ (2001). Accounting for common method
+        variance in cross-sectional research designs. \textit{Journal of Applied
+        Psychology}, \textit{86}(1), 114--121.
+        \url{https://doi.org/10.1037/0021-9010.86.1.114}
+
 \end{itemize}
 
 \end{document}
